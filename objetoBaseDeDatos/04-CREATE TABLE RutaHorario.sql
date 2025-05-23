@@ -1,0 +1,11 @@
+USE [ProyectoBusesDB]
+go
+CREATE TABLE RutaHorario(
+RutaHorarioID INT PRIMARY KEY IDENTITY(1,1),    
+RutaID INT,
+HorarioID INT,
+FOREIGN KEY (RutaID) REFERENCES Ruta(RutaID),
+FOREIGN KEY (HorarioID) REFERENCES Horario(HorarioID)
+ON DELETE CASCADE
+)   
+
